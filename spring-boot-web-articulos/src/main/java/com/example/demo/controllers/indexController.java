@@ -18,7 +18,7 @@ import com.example.demo.models.Articulo;
 @RequestMapping("/app")
 public class indexController {
 	
-	@GetMapping({"/index"})
+	@GetMapping({"/index", "/" , "/home" , "" , "/casa" })
 	public String index(Model model) {
 		model.addAttribute("titulo", "Articulos inicio");
 		return "index";
@@ -28,12 +28,13 @@ public class indexController {
 		model.addAttribute("titulo", "Articulos inicio");
 		return "articulos";
 	}
+	
 	//
 	@ModelAttribute("articulos")
 	public List<Articulo> setArticulos(Model model) {
 		List<Articulo> articulo= Arrays.asList(
-				new Articulo("idkdescription",14.3f,"Chevrolet",12,"nose"));
-		model.addAttribute("titulo", "Articulos inicio");
+				new Articulo("idkdescription",14.3f,"Chevrolet",12,"nose"),
+				new Articulo("sdasda",24.3f,"Chevroleta",122,"nose2"));
 		return articulo;
 	}
 	
