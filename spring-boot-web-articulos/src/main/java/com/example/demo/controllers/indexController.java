@@ -28,6 +28,7 @@ public class indexController {
 		model.addAttribute("titulo", "Articulos inicio");
 		return "articulos";
 	}
+	//
 	@ModelAttribute("articulos")
 	public List<Articulo> setArticulos(Model model) {
 		List<Articulo> articulo= Arrays.asList(
